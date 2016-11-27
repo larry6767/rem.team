@@ -1,0 +1,193 @@
+clearfix()
+  &:before
+  &:after
+    content " "
+    display table
+  &:after
+    clear both
+
+to-left(width)
+  width width
+  float left
+
+to-right(width)
+  width width
+  float right
+
+center-block()
+  display block
+  margin-left auto
+  margin-right auto
+
+os-light(font-size, line-height, color)
+  font 300 font-size/line-height "Open Sans", sans-serif
+  font-size font-size
+  color color
+
+os(font-size, line-height, color)
+  font 400 font-size/line-height "Open Sans", sans-serif
+  font-size font-size
+  color color
+
+os-bold(font-size, line-height, color)
+  font 700 font-size/line-height "Open Sans", sans-serif
+  font-size font-size
+  color color
+
+ps-bold(font-size, line-height, color)
+  // font 700 font-size/line-height "PT Sans", sans-serif
+  font-weight 700
+  line-height line-height
+  font-size font-size
+  font-family "PT Sans", sans-serif
+  color color
+
+ps-regular(font-size, line-height, color)
+  // font 400 font-size/line-height "PT Sans", sans-serif
+  font-weight 400
+  line-height line-height
+  font-size font-size
+  font-family "PT Sans", sans-serif
+  color color
+
+btn-hexagon(color)
+  display: inline-block;
+  width 50px
+  height 27px
+  background-color color
+  background-image url("../img/sprite.png")
+  background-repeat no-repeat
+  background-position center
+  position relative
+
+  &:before
+    content ""
+    position absolute
+    top -15px
+    left 0
+    width 0
+    height 0
+    border-left 25px solid transparent
+    border-right 25px solid transparent
+    border-bottom 15px solid color
+
+  &:after
+    content ""
+    position absolute
+    bottom -15px 
+    left 0
+    width 0
+    height 0
+    border-left 25px solid transparent
+    border-right 25px solid transparent
+    border-top 15px solid color
+    
+flex-row()
+  display flex
+  flex-direction row
+  justify-content center
+  flex-wrap wrap
+  align-items center
+  
+flex-column()
+  display flex
+  flex-direction column
+  justify-content center
+  flex-wrap wrap
+  align-items center
+  
+flex-center()
+  display flex
+  justify-content center
+  align-content center
+  
+
+// underline-animation
+
+underline-animation()
+  &
+    position relative
+
+  &:before
+    content ""
+    position absolute
+    width 100%
+    height 2px
+    bottom 0
+    left 0
+    background-color color4
+    visibility hidden
+    -webkit-transform scaleX(0)
+    transform scaleX(0)
+    -webkit-transition all 0.3s ease-in-out 0s
+    transition all 0.3s ease-in-out 0s
+
+  &:hover:before
+    visibility visible
+    -webkit-transform scaleX(1)
+    transform scaleX(1)
+
+// btn
+
+btn(bgcolor, bcolor)
+  display inline-block
+  text-align center
+  white-space nowrap
+  vertical-align middle
+  cursor pointer
+  user-select none
+  border 3px solid transparent
+  padding 0.5rem 1rem
+  font-size 1rem
+  // border-radius 0.25rem
+  text-decoration none
+  background-color bgcolor
+  border-color bcolor
+
+btn-hover(bgcolor, bcolor, color)
+  &:hover
+    color color
+    background-color bgcolor
+    border-color bcolor
+    transition all 0.2s ease-in-out 0s
+
+// some-text
+some-text(color)
+  ps-bold(1rem, 1.3, color)
+  margin 0
+  
+align-center()
+  text-align center
+  vertical-align middle
+
+some-title(color)
+  ps-bold(1.5rem, 1.3, color)
+  margin-top 1em
+  margin-bottom 0.5em
+
+some-list(color)
+  list-style-type none
+  width 100%
+  &__item
+    ps-bold(1rem, 1.3, color)
+
+// input
+some-input(color)
+  display block
+  width 100%
+  padding 0.5rem 0.75rem
+  background-color color
+  background-image none
+  border 1px solid rgba(0, 0, 0, 0.15)
+  // border-radius 0.25rem
+  outline none
+  margin 0 auto
+
+page-title(color)
+  ps-bold(2rem, 1.3, color)
+  text-transform uppercase
+  margin 0 auto
+  margin-top 2em
+  margin-bottom 2em
+  width 80%
+  text-align center

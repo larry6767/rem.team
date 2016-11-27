@@ -1,0 +1,30 @@
+// ///////////
+// main-header
+// ///////////
+
+//- logo variables
+- var logoLink = "img/logo.jpg";
+//- var logoWidth = "221";
+//- var logoHeight = "43";
+
+//- main-navigation variables / here write down "link": "item"
+- var mainNavigationArray = {"#main": "Главная", "#about": "О нас", "#catalog": "Каталог", "#portfolio": "Наши работы", "#contact": "Контакты"};
+
+//- phone variables
+- var phoneNumberLink = "tel:88000000000";
+- var phoneNumber = "8(800)000-00-00";
+
+header.main-header
+	.main-header-container
+		.logo
+			img.logo__img(src=logoLink alt="logo")
+		nav.main-navigation
+			ul.main-navigation__list
+				each mainNavigationItem, mainNavigationLink in mainNavigationArray
+					li.main-navigation__item
+						a.main-navigation__link(href=mainNavigationLink)
+							span.underline-animation= mainNavigationItem
+		.phone-block
+			p.phone-block__text Есть вопросы? Звоните сейчас!
+			a.phone-number(href=phoneNumberLink)= phoneNumber
+			p.phone-block__text Для Вас звонок бесплатный!

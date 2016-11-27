@@ -1,0 +1,33 @@
+// ////////////
+// first-screen
+// ////////////
+
+.first-screen
+	.first-screen-filter
+	.first-screen-container
+		a.btn-callback.order(href="#") Заказать обратный звонок
+		h1.page-title ЭЛЕКТРОМОНТАЖ В РОСТОВЕ И ОБЛАСТИ ЗА 1 ДЕНЬ
+
+		form.first-screen-form(method="post" action="mail.php")
+			h2.first-screen-form__title Заказать консультацию!
+			p.first-screen-form__text Закажите <span class="underline">БЕСПЛАТНУЮ</span> консультацию:
+			ul.first-screen-form-list
+				li.first-screen-form-list__item - мы подскажем
+				li.first-screen-form-list__item - подготовим проект и смету
+			input.first-screen-form__input(type="tel" name="phone-number" placeholder="Введите свой номер телефона")
+			input.first-screen-form__submit(type="submit" value="Заказать консультацию")
+			p.first-screen-form__disclaimer Заполнение заявки Вас ни к чему не обязывает! Вы сможете отказаться в любой момент.
+			
+	.features-wrapper
+		.features
+			.features-column
+				img.features__img(src="img/good-white.png" width="50")
+				p.features__text Самостоятельная закупка материалов. При больших объемах гарантированная скидка
+
+			.features-column
+				img.features__img(src="img/time-white.png" width="50")
+				p.features__text Гарантия качества и соблюдение поставленных сроков
+
+			.features-column
+				img.features__img(src="img/deal-white.png" width="55")
+				p.features__text Бесплатный выезд на объект, консультация и составление сметы

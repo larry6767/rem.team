@@ -1,0 +1,14 @@
+// /////
+// modal
+// /////
+
+div(style="display: none;")
+	.modal-content
+		.box-modal_close.arcticmodal-close
+		.form-title Имя товара
+		form.form.ajax_form(method="post" action="mail.php")
+			input(type="text" name="name" id="name" placeholder="Ваше имя")
+			input(type="tel" name="phone" id="phone" placeholder="Ваш телефон")
+			input(type="email" name="email" id="email" placeholder="Ваш e-mail")
+			input(type="hidden" name="target")
+			input.submit-button(type="submit" value="Заказать")
