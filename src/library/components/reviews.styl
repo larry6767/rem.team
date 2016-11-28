@@ -1,0 +1,221 @@
+.reviews
+	background-color color5
+	padding-top 4em
+	padding-bottom 4em
+
+.reviews-container
+	max-width 1200px
+	padding-top 0.1em
+	margin 0 auto
+	flex-row()
+
+.slider-wrapper
+	width 100%
+
+.slider
+	width 100%
+
+.slider__item-container
+	flex-row()
+	align-items flex-start
+	width 100%
+
+.slider__column
+	width 50%
+	padding 0 2em
+
+.reviews__title
+	some-title(color1)
+	text-transform uppercase
+	align-center()
+	margin-top 0
+	margin-bottom 2em
+
+.slider__img-big
+	width 100%
+	min-height 350px
+	background-size cover
+	
+.slider__img-big--1
+	background-image url("../img/reviews/gate_1.jpg")
+
+.slider__img-big--2
+	background-image url("../img/reviews/gate_2.jpg")
+	
+.slider__img-big--3
+	background-image url("../img/reviews/gate_3.jpg")
+
+.slider__img-small
+	width 50%
+	min-height 130px
+	background-size cover
+
+.slider__img-small--1
+	background-image url("../img/reviews/author_1.jpg")
+
+.slider__img-small--2
+	background-image url("../img/reviews/author_2.jpg")
+	
+.slider__img-small--3
+	background-image url("../img/reviews/author_3.jpg")
+
+.slider__title
+	some-title(color1)
+	
+.slider__text
+	some-text(color1)
+	
+.slider-wrapper 
+	position relative
+	display flex
+	.slider
+		// width 90%
+		// display inline-block
+		// margin 30px auto 80px
+		.prev,
+		.next
+			position absolute
+			top 0
+			bottom 0
+			height 32px
+			margin auto
+			cursor pointer
+
+			svg
+				fill color1
+				transition fill .5s
+			
+			&:hover svg
+				transition-duration .2s
+				fill color4
+			
+		
+		.prev
+			left -30px
+			transform rotateY(180deg)
+		
+		.next
+			right -30px
+		
+		// img
+		// 	margin auto
+		// 	outline none
+		// 	max-height 240px
+		// 
+	
+
+
+.slick-loading .slick-list
+	background #fff url('http://kenwheeler.github.io/slick/slick/ajax-loader.gif') center center no-repeat
+
+
+.slick-slider
+	margin-bottom 30px
+
+
+.slick-track
+	display flex
+	align-items center
+
+
+.slick-slide
+	// padding 10px
+	clear fix
+	max-width 100%
+	display block
+	overflow hidden
+
+
+.slick-dots
+	clear fix
+	position absolute
+	bottom -65px
+	display block
+	width 100%
+	padding 0
+	list-style none
+	text-align center
+	li
+		position relative
+		display inline-block
+		width 20px
+		height 20px
+		margin 0 5px
+		padding 0
+		cursor pointer
+		button
+			font-size 0
+			line-height 0
+			display block
+			width 20px
+			height 20px
+			padding 5px
+			cursor pointer
+			border 0
+			outline none
+			background-color transparent
+			&:hover
+				outline none
+			
+			&:hover:before
+				opacity 1
+				background-color color4
+			
+			&:before
+				top 0
+				bottom 0
+				right 0
+				left 0
+				margin auto
+				width 15px
+				height 15px
+				border-radius 50%
+				border 2px solid color1
+				display block
+				content ' '
+				position absolute
+			
+		
+		&.slick-active button:before
+			color color1
+			border-color color1
+			background-color color1
+		
+	
+
+.slick-current,
+.slick-active
+	outline none
+
+
+@media screen and (max-width 1024px)
+	.slider__img-small
+		width 40%
+		float left
+		margin-right 1.5em
+		margin-bottom 1em
+		min-height 100px
+	
+	.slider__title
+		margin-top 0
+
+	.slider__img-big
+		min-height 300px
+		
+@media screen and (max-width 768px)
+	.slider__column:first-child
+		display none
+		
+	.slider__column:last-child
+		width 80%
+		flex-basis 80%
+		text-align center
+		
+	.slider__img-small
+		width 200px
+		min-height 110px
+		float none
+		margin 0 auto
+	
+	.slider__title
+		margin-top 1em
