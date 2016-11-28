@@ -1,0 +1,49 @@
+.section
+	background-color white
+	padding-top 4em
+	padding-bottom 4em
+
+.section-container
+	max-width 1200px
+	padding-top 0.1em
+	margin 0 auto
+	flex-row()
+
+.section-column
+	width 50%
+	padding 0 2em
+	text-align center
+
+.section__title
+	some-title(color5)
+	margin-top 0
+	margin-bottom 1em
+	text-transform uppercase
+	text-align center
+
+.section__text
+	some-text(color5)
+	margin-bottom 1em
+
+.section__text:last-of-type
+	margin-bottom 2em
+
+.section__btn
+	btn(white, color5)
+	ps-bold(16px, 1.3, color5)
+	btn-hover(color5, color5, white)
+
+.section__img
+	width 100%
+
+@media (max-width: 992px)
+	.section-container
+		flex-direction column
+	
+	.section-column
+		margin-bottom 3em
+		width 100%
+	
+	.section-column:first-child
+		order 1
+		margin-bottom 0

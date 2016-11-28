@@ -1,0 +1,120 @@
+.promo
+	background-color color5
+	padding-top 4em
+	padding-bottom 8em
+
+.promo-container
+	max-width 1200px
+	padding-top 0.1em
+	margin 0 auto
+	flex-row()
+
+.promo-column
+	width 50%
+	flex-row()
+
+.promo-subcolumn
+	width 45%
+	margin-left 5%
+
+.promo-subcolumn:nth-child(2)
+	width 25%
+	margin-left 5%
+
+.promo-column:nth-child(2) .promo-subcolumn
+	margin-left 0
+
+.promo-column:nth-child(2) .promo-subcolumn:nth-child(2)
+	margin-right 15%
+	margin-left 5%
+	
+.promo-title
+	some-title(white)
+	align-center()
+	margin-top 0
+	margin-bottom 3em
+	text-transform uppercase
+
+.promo-text
+	some-title(white)
+	margin-top 0
+
+.btn-order
+	btn(color5, white)
+	ps-bold(16px, 1.3, white)
+	btn-hover(white, white, color5)
+
+.promo-img
+	position relative
+	width 148px
+	height 148px
+	border 15px solid #fff
+
+.promo-img:after
+	content ''
+	display block
+	position absolute
+	background url(../img/sprite.png) 0 0 no-repeat
+	width 140px
+	height 240px
+	z-index 100
+	background-position -108px 0px
+	top -36px
+	left -10px
+
+.promo-column:nth-child(2) .promo-img:after
+	background-position -260px 0px
+	top -35px
+	left -12px
+	width 160px
+
+@media (max-width: 1024px)
+	.promo-column:nth-child(2) .promo-subcolumn:nth-child(2)
+		margin-right 5%
+
+@media screen and (max-width: 992px)
+	.promo-container
+		flex-column()
+	
+	.promo-column
+		width 550px
+	
+	.promo-subcolumn
+		margin-left 0	
+
+	.promo-column:first-child
+		margin-bottom 8em
+	
+	.promo-column:nth-child(2) .promo-subcolumn:nth-child(2)
+		margin-right 0
+		margin-left 5%
+@media screen and (max-width: 500px)
+	.promo-column
+		width 100%
+		flex-column()
+		
+	.promo-subcolumn:nth-child(2)
+		order -1
+
+	.promo-subcolumn
+		margin-left 0
+		align-center()
+		width 80%
+	
+	.promo-column:nth-child(1) .promo-subcolumn:nth-child(2)
+		margin-left auto
+		margin-right auto
+		margin-bottom 2em
+		width 80%
+
+	.promo-column:nth-child(2) .promo-subcolumn:nth-child(2)
+		margin-left auto
+		margin-right auto
+		margin-bottom 2em
+		width 80%
+	
+	.promo-img
+		margin 0 auto
+		
+	.promo-img:after
+		height 169px
