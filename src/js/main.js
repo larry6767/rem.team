@@ -166,4 +166,8 @@ $(document).ready(function() {
     });
   });
 
+  //parallax
+
+  $('.first-screen').parallax({imageSrc: '../img/first-screen-bg.jpg'});
+
 });
