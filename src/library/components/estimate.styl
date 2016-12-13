@@ -2,12 +2,12 @@
 	background-color color1
 	padding-top 4em
 	padding-bottom 4em
-	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InJnYmEoNjQsIDQ5LCA0NywgMC4yKSI+PC9yZWN0Pgo8L3N2Zz4=");
 
 .estimate-container
 	max-width 1200px
 	padding-top 0.1em
 	margin 0 auto
+	margin-bottom 2em
 	flex-row()
 	align-items flex-start
 	
@@ -16,10 +16,6 @@
 	text-transform uppercase
 	align-center()
 	margin-top 0
-
-.estimate__subtitle
-	some-text(color1)
-	align-center()
 
 .estimate-column
 	width 50%
@@ -45,24 +41,6 @@
 			height 2.5em
 			padding 0.2em 0.2em
 
-// .estimate
-// 	.goods__column-title
-// 		some-title(color5)
-
-// 	.goods__text
-// 		some-text(color5)
-// 		margin-top 2em
-// 		margin-bottom 2em
-// 		max-width 230px
-	
-// 	.goods__img
-// 		border 1em solid color1
-	
-// 	.goods__btn
-// 		btn(color5, color1)
-// 		ps-bold(1rem, 1.3, color1)
-// 		btn-hover(color1, color1, color5)
-
 @media screen and (max-width: 992px)
 	.estimate-container .goods-column
 		display none
@@ -71,3 +49,7 @@
 		padding 0 2em
 		padding-top 2em
 		flex-row()
+
+.estimate-text
+	some-text(color5)
+	align-center()

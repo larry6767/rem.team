@@ -1,0 +1,38 @@
+.works
+	background-color color1
+	padding-top 4em
+	padding-bottom 4em
+
+.works-container
+	max-width 1200px
+	padding-top 0.1em
+	margin 0 auto
+	margin-bottom 2em
+	flex-row()
+	
+.works__title
+	some-title(color5)
+	text-transform uppercase
+	align-center()
+	margin-top 0
+	margin-bottom 2em
+
+.works__link
+	font-size 0
+
+.works__text
+	some-text(color5)
+	align-center()
+	margin-top 2em
+	
+@media (max-width: 1200px)
+	.works__text
+		max-width 900px
+
+@media (max-width: 900px)
+	.works__text
+		max-width 600px
+		
+@media (max-width: 600px)
+	.works__text
+		max-width 300px
