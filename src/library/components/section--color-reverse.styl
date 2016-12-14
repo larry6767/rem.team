@@ -1,0 +1,70 @@
+.section
+	background-color color1
+	padding-top 4em
+	padding-bottom 4em
+
+.section-container
+	max-width 1200px
+	padding-top 0.1em
+	margin 0 auto
+	flex-row()
+
+.section-column
+	width 50%
+	padding 0 2em
+	text-align center
+
+.section__title
+	some-title(color5)
+	margin-top 0
+	margin-bottom 1em
+	text-transform uppercase
+	text-align center
+
+.section__text
+	some-text(color5)
+	margin-bottom 1em
+
+.section__text:last-of-type
+	margin-bottom 2em
+
+.section__btn
+	btn(color1, color5)
+	ps-bold(16px, 1.3, color5)
+	btn-hover(color5, color5, color1)
+
+.section__img
+	width 100%
+
+@media (max-width: 992px)
+	.section-container
+		flex-direction column
+	
+	.section-column
+		margin-bottom 3em
+		width 100%
+	
+	.section-column--img-right:first-child
+		order 1
+		margin-bottom 0
+		
+.section--color-reverse
+	background-color color5
+	
+	.section__title
+		some-title(color1)
+		margin-top 0
+		margin-bottom 1em
+	
+	.section__text
+		some-text(color1)
+		margin-bottom 1em
+	
+	.section__text:last-of-type
+		margin-bottom 2em
+		
+	.section__btn
+		btn(color5, color1)
+		ps-bold(16px, 1.3, color1)
+		btn-hover(color1, color1, color5)
+	
