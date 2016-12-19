@@ -18,6 +18,7 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const pug = require('gulp-pug');
 const critical = require('critical').stream;
+const inline_base64 = require('gulp-inline-base64');
 
 
 // const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
@@ -40,6 +41,11 @@ gulp.task('styles', function() {
 		gulp.src('src/library/style.styl'),
 		sourcemaps.init(),
 		stylus(),
+		inline_base64({
+			baseDir: "src/img/",
+            maxSize: 30 * 1024,
+            debug: true
+        }),
 		autoprefixer(),
 		sourcemaps.write(),
 		gulp.dest('public/css'),

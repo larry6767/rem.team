@@ -1,17 +1,29 @@
 .first-screen
 	position relative
-	background-color #2b2b2b
-	background-image url("../img/first-screen-bg.jpg")
+	overflow hidden
 	background-repeat no-repeat
 	background-size cover
 	background-position bottom
 	
-// .first-screen-filter
-// 	width 100%
-// 	height 100%
-// 	position absolute
-// 	background rgba(96, 72, 72, 0.2)
-
+.first-screen-parallax-bg
+	background-color #2b2b2b
+	width 100%
+	height 100%
+	position absolute
+	top 0
+	left 0
+	z-index -2
+	
+.first-screen-parallax
+	background-position: bottom center;
+	background-size: auto;
+	background-repeat: no-repeat;
+	background-image url("../img/first-screen-bg.jpg")
+	width: 100%;
+	height: 800px;
+	position: fixed;
+	z-index: -1;
+		
 .first-screen-container
 	max-width 1200px
 	padding-top 0.1em
@@ -42,7 +54,7 @@
 		margin-top 0
 
 .features-column
-	flex-basis 14em
+	flex-basis 12em
 	margin 0 3em
 	text-align center
 
@@ -122,7 +134,7 @@
 		right 1em
 		
 	.features-column
-		flex-basis 14em
+		flex-basis 12em
 		margin 0 1em
 		
 @media (max-width: 992px)
@@ -132,11 +144,20 @@
 	.page-title
 		margin 1em auto
 		
+	.features
+		justify-content space-around
+	
+	.features-column
+		flex-basis 18em
+		margin 0 1em
+		margin-bottom 2em
+		
 @media (max-width: 768px)
 	.page-title
 		width 90%
 	.features-column
-		margin 0	
+		margin 0
+		margin-bottom 2em	
 
 @media (max-width: 740px)
 	.features
@@ -148,6 +169,8 @@
 		flex-basis 10em
 	.features-wrapper
 		padding-bottom 0
+	.features__text
+		width 16em
 
 @media (max-width: 576px)
 	.features-column

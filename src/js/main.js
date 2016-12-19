@@ -27,34 +27,6 @@ $(document).ready(function() {
       }]
   });
 
-// //yandex map
-//   YMaps.jQuery(function () {
-//     var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
-//     map.setCenter(new YMaps.GeoPoint(39.702118,47.232759), 15);
-
-//     // create style
-//     var s = new YMaps.Style();
-
-//     // create map-marker style
-//     s.iconStyle = new YMaps.IconStyle();
-//     s.iconStyle.href = "http://mers.roob.in/img/marker.png";
-//     s.iconStyle.size = new YMaps.Point(48, 64);
-//     s.iconStyle.offset = new YMaps.Point(-20, -65);
-
-//     var placemark = new YMaps.Placemark(new YMaps.GeoPoint(39.705918,47.227089), {style: s});
-
-//     placemark.name = "Intacto";
-//     placemark.description = "г. Ростов-на-Дону, ул. Греческого Города Волос, д. 6, оф. 513";
-
-//     map.addOverlay(placemark);
-
-//   });
-
-//   $(".map-mask").click(function (e) {
-//     $(".map-mask").remove();
-//   });
-
-
 //scroll
   $(document).ready(function() {
    
@@ -165,5 +137,26 @@ $(document).ready(function() {
       }
     });
   });
+
+});
+
+window.addEventListener('scroll', function (event) {
+  
+  var depth, i, layer, layers, len, movement, topDistance, translate3d;
+  topDistance = this.pageYOffset;
+  layers = document.querySelectorAll('[data-type=\'parallax\']');
+
+  for (i = 0, len = layers.length; i < len; i++) {
+
+    layer = layers[i];
+    depth = layer.getAttribute('data-depth');
+    movement = -(topDistance * depth);
+    translate3d = 'translate3d(0, ' + movement + 'px, 0)';
+    layer.style['-webkit-transform'] = translate3d;
+    layer.style['-moz-transform'] = translate3d;
+    layer.style['-ms-transform'] = translate3d;
+    layer.style['-o-transform'] = translate3d;
+    layer.style.transform = translate3d;
+  }
 
 });

@@ -3,7 +3,8 @@
 // ////////////
 
 .first-screen(id="main")
-	//- .first-screen-filter
+	.first-screen-parallax-bg
+	.first-screen-parallax(data-type="parallax" data-depth="0.30")
 	.first-screen-container
 		a.btn-callback.order(href="#") Заказать обратный звонок
 		h1.page-title.svg-pattern ЭЛЕКТРОМОНТАЖ В РОСТОВЕ И ОБЛАСТИ
@@ -27,6 +28,10 @@
 			.features-column
 				img.features__img(src="img/time-left.svg" width="50")
 				p.features__text Гарантия качества и соблюдение поставленных сроков
+
+			.features-column
+				img.features__img(src="img/set-square.svg" width="50")
+				p.features__text Изготовление исполнительной схемы электромонтажа
 
 			.features-column
 				img.features__img(src="img/calculator.svg" width="50")
